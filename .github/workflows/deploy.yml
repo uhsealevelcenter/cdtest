@@ -1,5 +1,7 @@
 name: website deployment
-on: [push]
+on: 
+  push:
+  workflow_dispatch:
 jobs:  
   deploy:    
     runs-on: ubuntu-20.04
