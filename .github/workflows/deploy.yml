@@ -9,11 +9,10 @@ jobs:
       - uses: actions/checkout@master
       - name: deploy cdtest
         uses: appleboy/scp-action@master
-        env:
-          HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.KEY }}
         with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.KEY }}
           source: "dest/*"
-          target: "/srv/htdocs/uhslc.soest.hawaii.edu/"
+          target: "/srv/htdocs/uhslc.soest.hawaii.edu/cdtest"
