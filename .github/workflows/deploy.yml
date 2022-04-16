@@ -16,3 +16,6 @@ jobs:
           key: ${{ secrets.KEY }}
           source: "dest/*"
           target: "/srv/htdocs/uhslc.soest.hawaii.edu/cdtest"
+          script: |
+            whoami
+            ls -al
